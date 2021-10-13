@@ -1,0 +1,97 @@
+$body-color: violet;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+.block img {
+  width: 100%;
+}
+
+  .from-wrapper {
+    padding: 10px 0;
+    font-family: "Roboto", sans-serif;
+  }
+  body {
+    background-image: url("https://i.pinimg.com/originals/31/24/46/3124467bb76d296d5e08312ff4b157ac.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    font-family: "Poppins", sans-serif;
+    background-color: $body-color;
+  }
+  #icon-vk {
+    color: #2787f5;
+  }
+  #icon-inst {
+    color: blueviolet;
+  }
+
+  .contact-info {
+    border: 2px solid rgb(0, 110, 255);
+    display: inline-block;
+    background-color: rgb(161, 255, 216);
+    padding: 2px;
+  }
+
+  .links {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    border: 3px solid #2787f5;
+  }
+
+  .block {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    max-width: 400px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(194, 137, 30, 0.8);
+
+    --border-width: 3px;
+
+    position: relative;
+    align-items: center;
+    border-radius: var(--border-width);
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(
+        60deg,
+        hsl(224, 85%, 66%, 0.7),
+        hsl(269, 85%, 66%, 0.7),
+        hsl(314, 85%, 66%, 0.7),
+        hsl(359, 85%, 66%, 0.7),
+        hsl(44, 85%, 66%, 0.7),
+        hsl(89, 85%, 66%, 0.7),
+        hsl(134, 85%, 66%, 0.7),
+        hsl(179, 85%, 66%, 0.7)
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      animation: moveGradient 4s alternate infinite;
+    }
+  }
+
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+
+@media (max-device-width: 600px) {
+  .links {
+    width: 110px;
+  }
+}
